@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 40 20% 97%;
+    --foreground: 213 30% 18%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 213 30% 18%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 213 30% 18%;
+
+    --primary: 215 35% 15%;
+    /* Rich Midnight Navy */
+    --primary-foreground: 40 20% 97%;
+
+    --secondary: 40 20% 97%;
+    --secondary-foreground: 215 35% 15%;
+
+    --muted: 40 15% 94%;
+    --muted-foreground: 215 14% 46%;
+
+    --accent: 38 52% 42%;
+    /* Deeper, richer Gold */
+    --accent-foreground: 40 20% 97%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 35 20% 88%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 38 52% 42%;
+
+    --radius: 0.5rem;
+
+    --gold: 38 52% 42%;
+    --gold-light: 38 45% 85%;
+    --navy: 215 35% 15%;
+    --navy-light: 215 35% 25%;
+    --ivory: 40 20% 97%;
+    --ivory-dark: 40 15% 94%;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+    font-size: 1.15rem;
+    /* Further increased base font size */
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading text-foreground;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .text-gold {
+    color: hsl(var(--gold));
+  }
+
+  .bg-gold {
+    background-color: hsl(var(--gold));
+  }
+
+  .bg-navy {
+    background-color: hsl(var(--navy));
+  }
+
+  .text-navy {
+    color: hsl(var(--navy));
+  }
+
+  .bg-ivory {
+    background-color: hsl(var(--ivory));
+  }
+
+  .bg-ivory-dark {
+    background-color: hsl(var(--ivory-dark));
+  }
+
+  .border-gold {
+    border-color: hsl(var(--gold));
+  }
+
+  .border-gold-light {
+    border-color: hsl(var(--gold-light));
+  }
+
+  .bg-gold-light {
+    background-color: hsl(var(--gold-light));
+  }
+
+  .text-navy-light {
+    color: hsl(var(--navy-light));
+  }
+
+  .bg-navy-light {
+    background-color: hsl(var(--navy-light));
+  }
+}
